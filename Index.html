@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        .container {
+            margin-top: 70px;
+            padding: 20px;
+        }
+        .button {
+            background-color: #7289da;
+            color: white;
+            padding: 15px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #5b6eae;
+        }
+        .section {
+            background-color: #f9f9f9;
+            padding: 50px 20px;
+            margin-top: 50px;
+            border-top: 1px solid #ddd;
+        }
+        .dark-background {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 50px 20px;
+            color: white;
+        }
+        .landing {
+            background: linear-gradient(to right, #ffffff, #e0eaff);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 3s forwards;
+        }
+        .landing h1 {
+            color: #6a5acd;
+            font-size: 4em;
+            opacity: 0;
+            animation: fadeInText 2s 1s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInText {
+            to {
+                opacity: 1;
+            }
+        }
+        .developer-name {
+            color: #32cd32;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll("nav a").forEach(anchor => {
+                anchor.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute("href")).scrollIntoView({
+                        behavior: "smooth"
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#developer">Developer</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div id="home" class="landing">
+        <h1>An Advanced Discord Bot</h1>
+    </div>
+
+    <div id="about" class="section about">
+        <h2>About the Bot</h2>
+        <div class="dark-background">
+            <p>This bot is designed to help manage your server with ease. It comes with various features including moderation tools, custom commands, and more.</p>
+            <p>Features:</p>
+            <ul>
+                <li>Automatic moderation</li>
+                <li>Customizable commands</li>
+                <li>Role management</li>
+                <li>Fun and utility commands</li>
+            </ul>
+            <p>Stay tuned for more updates and features!</p>
+        </div>
+    </div>
+
+    <div id="developer" class="section">
+        <h2>Developer</h2>
+        <p>Developed by <span class="developer-name">sp1g</span>. For more information about the bot and its development, visit the GitHub repository.</p>
+    </div>
+
+    <div id="contact" class="section">
+        <h2>Contact</h2>
+        <p>If you have any questions or need support, please contact us at Discord user <span class="developer-name">sp1g</span>.</p>
+    </div>
+</body>
+</html
