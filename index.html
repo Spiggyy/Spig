@@ -67,21 +67,15 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            animation: fadeIn 3s forwards;
+            animation: typingAnimation 5s steps(40) forwards, fadeInText 2s 1s forwards;
         }
         .landing h1 {
-            color: #6a5acd;
+            color: blue;
             font-size: 4em;
             opacity: 0;
-            animation: typingAnimation 5s steps(40) forwards, fadeInText 2s 1s forwards;
         }
         @keyframes typingAnimation {
             from { width: 0; }
-        }
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
         }
         @keyframes fadeInText {
             to {
@@ -143,4 +137,4 @@
         <p>If you have any questions or need support, please contact us by sending a friend request or message request to Discord user <span class="developer-name">sp1g</span>.</p>
     </div>
 </body>
-                                                                                                                                           </html>
+</html>
